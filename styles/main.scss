@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+.c-scrollbar {
+  z-index: 5000;
+}
+
 // TEXT STYLES =+++====++===+===============
 h1 {
   color: var(--green-color);
@@ -122,6 +126,7 @@ nav {
   background: none;
   color: var(--grey-color);
   height: auto;
+  z-index: 2000;
   .name {
     text-decoration: none;
     color: var(--green-color);
@@ -149,6 +154,7 @@ nav {
   bottom: 1rem;
   left: 0;
   width: 100%;
+  z-index: 2000;
   ul {
     display: flex;
     flex-direction: row;
@@ -205,6 +211,9 @@ nav {
 }
 
 .divider {
+  background-image: url("../images/divider1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 20vh;
 }
@@ -212,39 +221,46 @@ nav {
 #break {
   background-color: #adc8e6;
   padding-top: 30vh;
-}
+  h1 {
+    color: #faf8ec;
+  }
 
-.break-copy {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  width: 50%;
-  h3 {
-    font-size: 2em;
-    text-transform: lowercase;
-    font-weight: 300;
-    font-family: "Inconsolata";
-  }
-  .left {
-    width: 60%;
+  .break-copy {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
-  }
-  .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    img {
-      width: 800px;
-      transform: rotate(20deg);
-      margin-top: -8.5rem;
+    flex-direction: row;
+    width: 50%;
+    h3 {
+      font-size: 2em;
+      text-transform: lowercase;
+      font-weight: 300;
+      font-family: "Inconsolata";
+    }
+    .left {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .skills {
+        i {
+          color: #faf8ec;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      img {
+        width: 800px;
+        transform: rotate(20deg);
+        margin-top: -8.5rem;
+      }
     }
   }
 }
-
 .image-holder {
   background-color: #adc8e6;
   position: relative;
@@ -279,6 +295,25 @@ nav {
       height: auto;
       margin-left: -22%;
     }
+  }
+}
+
+#creec {
+  background: #4e4d4d;
+  color: var(--white-color);
+  .left {
+    width: 60%;
+    h1 {
+      color: #c6d5a8;
+    }
+    .skills {
+      i {
+        color: #c6d5a8;
+      }
+    }
+  }
+  .right {
+    width: 40%;
   }
 }
 

@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+.c-scrollbar {
+  z-index: 5000;
+}
+
 h1 {
   color: var(--green-color);
   font-size: 5em;
@@ -158,6 +162,7 @@ nav {
   background: none;
   color: var(--grey-color);
   height: auto;
+  z-index: 2000;
 }
 
 nav .name {
@@ -196,6 +201,7 @@ nav ul a {
   bottom: 1rem;
   left: 0;
   width: 100%;
+  z-index: 2000;
 }
 
 .footer ul {
@@ -265,6 +271,9 @@ nav ul a {
 }
 
 .divider {
+  background-image: url("../images/divider1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 20vh;
 }
@@ -274,7 +283,11 @@ nav ul a {
   padding-top: 30vh;
 }
 
-.break-copy {
+#break h1 {
+  color: #faf8ec;
+}
+
+#break .break-copy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,14 +301,14 @@ nav ul a {
   width: 50%;
 }
 
-.break-copy h3 {
+#break .break-copy h3 {
   font-size: 2em;
   text-transform: lowercase;
   font-weight: 300;
   font-family: "Inconsolata";
 }
 
-.break-copy .left {
+#break .break-copy .left {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +325,11 @@ nav ul a {
           align-items: flex-start;
 }
 
-.break-copy .right {
+#break .break-copy .left .skills i {
+  color: #faf8ec;
+}
+
+#break .break-copy .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +342,7 @@ nav ul a {
   width: 40%;
 }
 
-.break-copy .right img {
+#break .break-copy .right img {
   width: 800px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
@@ -390,6 +407,27 @@ nav ul a {
   width: 40%;
   height: auto;
   margin-left: -22%;
+}
+
+#creec {
+  background: #4e4d4d;
+  color: var(--white-color);
+}
+
+#creec .left {
+  width: 60%;
+}
+
+#creec .left h1 {
+  color: #c6d5a8;
+}
+
+#creec .left .skills i {
+  color: #c6d5a8;
+}
+
+#creec .right {
+  width: 40%;
 }
 
 sl-dialog {

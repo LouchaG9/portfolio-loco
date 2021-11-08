@@ -42,7 +42,7 @@
                     <a class="primary-cta about-link">learn about me <i class="fas fa-arrow-circle-down"></i></a>
                 </div>
             </div>
-            <div data-scroll data-scroll-speed="5" class="hero-svg svg">
+            <div data-scroll data-scroll-speed="10" class="hero-svg svg">
                 <svg width="1399" height="1080" viewBox="0 0 1399 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1:20)">
                     <rect x="728.5" y="193.5" width="178" height="264" rx="2.5" fill="#EFECEA" stroke="#AFBEBD" stroke-width="5" class="svg-elem-1"></rect>
@@ -134,17 +134,22 @@
             </div>
         </div>
 
-        <div class="divider"></div>
+        <div data-scroll class="divider"></div>
 
 <!-- CREEC Section =================================================================== -->
-        <div data-scroll-section class="section full">
-            <div data-scroll data-scroll-speed="2" class="hero-copy">
-                <h1>CREEC</h1>
-                <p class="anim-in-2 skills"><i class="fas fa-mobile-alt"></i> UI Design  | <i class="fas fa-user"></i> UX Design | <i class="fas fa-flask"></i> UX Research | <i class="fab fa-figma"></i> Prototyping</p>
-                <h3>Mobile UI design and UX reasearch created as a proposal for the City of Canning, and the Canning River Eco Education Centre.</h3>
-                <div class="btn-wrap">
-                    <a href="#creec" class="creec-opener primary-cta">Case Study <i class="fas fa-arrow-circle-right"></i></a>
-                    <a href="./creec-prototype.html" target="_blank" class="primary-cta">Live Prototype <i class="fas fa-external-link-alt"></i></a>
+        <div data-scroll-section class="section full" id="creec">
+            <div class="creec-copy row">
+                <div data-scroll data-scroll-speed="2" class="hero-copy left">
+                    <h1>CREEC</h1>
+                    <p class="anim-in-2 skills"><i class="fas fa-mobile-alt"></i> UI Design  | <i class="fas fa-user"></i> UX Design | <i class="fas fa-flask"></i> UX Research | <i class="fab fa-figma"></i> Prototyping</p>
+                    <h3>Mobile UI design and UX reasearch created as a proposal for the City of Canning, and the Canning River Eco Education Centre.</h3>
+                    <div class="btn-wrap">
+                        <a href="#creec" class="creec-opener primary-cta">Case Study <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="./creec-prototype.html" target="_blank" class="primary-cta">Live Prototype <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+
                 </div>
             </div>
         </div>
@@ -192,7 +197,7 @@
         </footer>
 
 <!-- Dialogs Section =================================================================== -->
-    <sl-dialog class="eotw-dialog">
+    <!-- <sl-dialog class="eotw-dialog">
         <div class="image-container">
             <img src="./images/eotw/EOTW-CS.png" alt="eotw case study image">
         </div>
@@ -203,11 +208,12 @@
             <img src="./images/eotw/EOTW-CS.png" alt="eotw case study image">
         </div>
         <sl-button slot="footer" type="primary" class="creec-closer">Close</sl-button>
-    </sl-dialog>
+    </sl-dialog> -->
     
     <script src="https://kit.fontawesome.com/ad887abba3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.49/dist/shoelace.js"></script>
+    <script src="./locoInit.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
