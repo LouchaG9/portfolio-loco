@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --white-color: #efecea;
+  --green-color: #005e67;
+  --grey-color: #323233;
+}
+
+body {
+  background: var(--white-color);
+  font-family: "Inconsolata";
+  font-style: normal;
+  color: var(--grey-color);
+  cursor: none;
+  overflow-x: hidden;
+}
+
+// TEXT STYLES =+++====++===+===============
+h1 {
+  color: var(--green-color);
+  font-size: 5em;
+  line-height: 80%;
+  padding-bottom: 40px;
+  font-family: "neue-haas-unica", sans-serif;
+}
+
+h2 {
+  font-size: 4em;
+  span {
+    color: var(--green-color);
+  }
+}
+
+h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Inconsolata", monospace;
+}
+
+// LAYOUT STYLES =+++====++===+===============
+.full {
+  height: 100vh;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  width: 100vw;
+  z-index: 100;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+// BUTTON AND LINK STYLES =+++====++===+===============
+.primary-cta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 1em;
+  background: var(--white-color);
+  border: solid 6px var(--green-color);
+  height: 60px;
+  width: 300px;
+  padding-left: 1em;
+  font-size: 1.6em;
+  text-decoration: none;
+  border-radius: 15px;
+  color: var(--grey-color);
+  transition: 0.2s ease;
+  box-shadow: 7px 7px 0 #013438;
+  i {
+    padding-left: 25px;
+    transition: 0.2s ease;
+    color: var(--green-color);
+  }
+  &:hover {
+    background: var(--green-color);
+    color: var(--white-color);
+    i {
+      color: var(--white-color);
+    }
+  }
+}
+
+a {
+  i {
+    font-size: 1.5em;
+    transform: translateY(13%);
+    margin-right: 10px;
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  gap: 1rem;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: none;
+  color: var(--grey-color);
+  height: auto;
+  .name {
+    text-decoration: none;
+    color: var(--green-color);
+    margin: 0 1em;
+    font-weight: bold;
+    font-size: 2em;
+    transition: 0.5s;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    a {
+      text-decoration: none;
+      color: var(--grey-color);
+      margin: 2em;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+    padding-left: 0;
+    color: var(--grey-color);
+
+    a {
+      text-decoration: none;
+      color: var(--grey-color);
+      margin: 0em 1em;
+    }
+  }
+}
+
+// Homepage Styles   =+++====++===+===============
+
+.hero-copy {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  h3 {
+    font-size: 2em;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-family: "Inconsolata";
+  }
+}
+
+.svg {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -1000;
+  opacity: 0.5;
+}
+
+.real {
+  z-index: 15;
+}
+
+//WORK SLIDES --------------------------------------------------------------------------------------------
+.skills {
+  width: 100%;
+  font-size: 1.4em;
+  font-family: "Inconsolata", sans-serif;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  line-height: 150%;
+}
+
+.divider {
+  width: 100vw;
+  height: 20vh;
+}
+
+#break {
+  background-color: #adc8e6;
+  padding-top: 30vh;
+}
+
+.break-copy {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 50%;
+  h3 {
+    font-size: 2em;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-family: "Inconsolata";
+  }
+  .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    img {
+      width: 800px;
+      transform: rotate(20deg);
+      margin-top: -8.5rem;
+    }
+  }
+}
+
+.image-holder {
+  background-color: #adc8e6;
+  position: relative;
+  z-index: -10;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  .row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-left: 15%;
+    .mockup {
+      width: 40%;
+      height: auto;
+      margin-left: -22%;
+    }
+  }
+  .row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -15rem;
+    height: auto;
+    width: 100%;
+    margin-left: 8%;
+    .mockup {
+      width: 40%;
+      height: auto;
+      margin-left: -22%;
+    }
+  }
+}
+
+sl-dialog {
+  --width: 1440px;
+  .image-container {
+    height: 80vh;
+    width: auto;
+    max-width: 1400px;
+    overflow-x: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.dialog::part(overlay) {
+  background-color: #323233;
+}
+
+.dialog::part(panel) {
+  background-color: var(--white-color);
+}
+
+.end {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 7vh;
+  background-color: var(--grey-color);
+  z-index: -5;
+}
+
+// About Section Styles --------------------------------------------
+
+.about-wrap {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  #profile-photo {
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 15px;
+  }
+  h2.about {
+    margin-top: -1.5em;
+    margin-left: 0.5em;
+    color: var(--white-color);
+  }
+  p.about-me {
+    margin-top: 2rem;
+    width: unset;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.5rem;
+  }
+}
+
+.contact-wrap {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h2.reach-out {
+    line-height: 0.9;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+    &:hover {
+      height: 600px;
+    }
+    &:hover .iphone {
+      top: 70%;
+      left: 50%;
+      height: 350px;
+    }
+    .content {
+      width: 100%;
+      left: 0;
+      padding: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 406px) {
+  .work {
+    width: 15px;
+    height: 200px;
+  }
+  nav {
+    ul {
+      visibility: hidden;
+    }
+    .name {
+      margin: 1em 2em;
+      font-size: 2em;
+    }
+  }
+  .nav-menu {
+    visibility: hidden;
+  }
+  #profile-photo {
+    min-width: 250px;
+  }
+  p {
+    width: 80%;
+  }
+  sl-form {
+    width: 80%;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  h2.reach-out {
+    margin-bottom: 1em;
+  }
+  .hero-copy {
+    h3 {
+      font-size: 1.8em;
+    }
+  }
+  .scroll-cta {
+    visibility: visible;
+    width: 100%;
+    color: var(--green-color);
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .rotated {
+    transform: rotate(180deg);
+  }
+
+  #fp-nav {
+    top: 15%;
+  }
+}
+
+// Mouse Circle Effect
+#mouse-circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 160, 139);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    background: rgb(0, 160, 139);
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+}
