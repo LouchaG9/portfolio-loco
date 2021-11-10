@@ -27,17 +27,38 @@ function mouseFollow(event) {
 
 document.addEventListener("mousemove", mouseFollow);
 
-// const copyButton = document.querySelector(".clip");
+const photo = document.getElementById("profile-photo");
+const hoverTarget = document.querySelector(".about-wrap");
 
-// copyButton.addEventListener("click", () => {
-//   copyText("louis.klause@gmail.com");
-// });
+function cardHover(event) {
+  // 3d hover
+  let ax = -(window.innerWidth / 2 - event.pageX) / 100;
+  let ay = (window.innerHeight / 2 - event.pageY) / 20;
 
-// function copyText(value) {
-//   let tempInput = document.createElement("input");
-//   tempInput.value = value;
-//   document.body.appendChild(tempInput);
-//   tempInput.select();
-//   document.execCommand("copy");
-//   document.body.removeChild(tempInput);
-// }
+  photo.style.transform = "rotate(" + ax + "deg) rotateX(" + ay + "deg)";
+}
+
+photo.addEventListener("mousemove", cardHover, false);
+
+const copyButton = document.querySelector(".clip");
+
+copyButton.addEventListener("click", () => {
+  copyText("louis.klause@gmail.com");
+  toggleClass();
+});
+
+function copyText(value) {
+  let tempInput = document.createElement("input");
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+function toggleClass() {
+  let copyAlert = document.querySelector(".alert");
+  copyAlert.classList.add("visible");
+  setTimeout(() => {
+    copyAlert.classList.remove("visible");
+  }, 1000);
+}

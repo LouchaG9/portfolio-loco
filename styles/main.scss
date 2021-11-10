@@ -80,11 +80,11 @@ p {
   background: var(--white-color);
   border: solid 6px var(--green-color);
   height: 60px;
-  width: 300px;
+  width: auto;
   padding-left: 1em;
   font-size: 1.6em;
-  text-decoration: none;
   border-radius: 15px;
+  text-decoration: none;
   color: var(--grey-color);
   transition: 0.2s ease;
   box-shadow: 7px 7px 0 #013438;
@@ -118,12 +118,13 @@ a {
 nav {
   width: 100%;
   position: fixed;
-  top: 1rem;
+  top: 0;
   left: 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background: none;
+  background: var(--white-color);
   color: var(--grey-color);
   height: auto;
   z-index: 2000;
@@ -172,32 +173,33 @@ nav {
 }
 
 // Homepage Styles   =+++====++===+===============
-
-.hero-copy {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 50%;
-  h3 {
-    font-size: 2em;
-    text-transform: lowercase;
-    font-weight: 300;
-    font-family: "Inconsolata";
+#home {
+  .hero-copy {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    h3 {
+      font-size: 2em;
+      text-transform: lowercase;
+      font-weight: 300;
+      font-family: "Inconsolata";
+    }
   }
-}
 
-.svg {
-  position: absolute;
-  top: 10%;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  z-index: -1000;
-  opacity: 0.5;
-}
+  .svg {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -1000;
+    opacity: 0.5;
+  }
 
-.real {
-  z-index: 15;
+  .real {
+    z-index: 15;
+  }
 }
 
 //WORK SLIDES --------------------------------------------------------------------------------------------
@@ -210,16 +212,8 @@ nav {
   line-height: 150%;
 }
 
-.divider {
-  background-image: url("../images/divider1.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 20vh;
-}
-
 #break {
-  background-color: #adc8e6;
+  background-color: #7a99bb;
   padding-top: 30vh;
   h1 {
     color: #faf8ec;
@@ -261,14 +255,32 @@ nav {
     }
   }
 }
+
+@keyframes ani {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100vw 0;
+  }
+}
+
 .image-holder {
-  background-color: #adc8e6;
+  background: #adc8e6;
   position: relative;
-  z-index: -10;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  .divi {
+    background: url("/images/blue-waves.svg") top repeat;
+    background-size: cover;
+    margin-top: -5rem;
+    height: 100px;
+    width: 100%;
+    animation: ani 15s linear infinite;
+  }
   .row1 {
     display: flex;
     flex-direction: row;
@@ -298,22 +310,112 @@ nav {
   }
 }
 
+.divider {
+  background: url("/images/grey-waves.svg") top repeat;
+  background-size: cover;
+  margin-top: -5rem;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  animation: ani 15s linear infinite;
+}
+
 #creec {
   background: #4e4d4d;
   color: var(--white-color);
-  .left {
-    width: 60%;
+  position: relative;
+  .creec-copy {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
     h1 {
       color: #c6d5a8;
     }
-    .skills {
-      i {
-        color: #c6d5a8;
+    h3 {
+      font-size: 2em;
+      text-transform: lowercase;
+      font-weight: 300;
+      font-family: "Inconsolata";
+    }
+    .left {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .skills {
+        i {
+          color: #c6d5a8;
+        }
+      }
+    }
+    .right {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img-div {
+        border-radius: 47px;
+        overflow: hidden;
+        img {
+          transform: scale(1.02);
+          max-width: 300px;
+          height: auto;
+        }
       }
     }
   }
-  .right {
-    width: 40%;
+}
+
+#eotw {
+  background: #b0d875;
+  color: var(--grey-color);
+  position: relative;
+  .eotw-copy {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    h1 {
+      color: #3482b1;
+    }
+    h3 {
+      font-size: 2em;
+      text-transform: lowercase;
+      font-weight: 300;
+      font-family: "Inconsolata";
+    }
+    .left {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .skills {
+        i {
+          color: #3482b1;
+        }
+      }
+    }
+    .right {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img-div {
+        border-radius: 47px;
+        overflow: hidden;
+        img {
+          transform: scale(1.02);
+          max-width: 300px;
+          height: auto;
+        }
+      }
+    }
   }
 }
 
@@ -357,19 +459,25 @@ sl-dialog {
   align-items: flex-start;
   #profile-photo {
     min-width: 300px;
-    max-width: 600px;
+    max-width: 500px;
     border-radius: 15px;
+    margin-bottom: 2rem;
+    border: solid 6px var(--green-color);
+    box-shadow: 7px 7px 0 #013438;
   }
   h2.about {
-    margin-top: -1.5em;
+    margin-top: -2em;
     margin-left: 0.5em;
+    margin-bottom: 1rem;
     color: var(--white-color);
   }
   p.about-me {
     margin-top: 2rem;
     width: unset;
-    font-family: "Inconsolata", monospace;
     font-size: 1.5rem;
+  }
+  .clip {
+    width: 200px;
   }
 }
 
@@ -381,6 +489,31 @@ sl-dialog {
   h2.reach-out {
     line-height: 0.9;
   }
+}
+
+.alert {
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: auto;
+  width: auto;
+  background: var(--white-color);
+  padding: 1em;
+  font-size: 1.6em;
+  border-radius: 15px;
+  color: var(--grey-color);
+  pointer-events: none;
+  border: solid 6px var(--green-color);
+  box-shadow: 7px 7px 0 #013438;
+}
+
+.visible {
+  opacity: 1;
+  transition: 2s ease;
 }
 
 @media (max-width: 800px) {
