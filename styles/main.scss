@@ -509,11 +509,12 @@ sl-dialog {
   pointer-events: none;
   border: solid 6px var(--green-color);
   box-shadow: 7px 7px 0 #013438;
+  transition: 0.5s ease;
 }
 
 .visible {
   opacity: 1;
-  transition: 2s ease;
+  transition: 0.5s ease;
 }
 
 @media (max-width: 800px) {
