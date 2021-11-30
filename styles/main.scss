@@ -151,24 +151,20 @@ nav {
 }
 
 .footer {
-  position: fixed;
-  bottom: 1rem;
-  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  z-index: 2000;
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style: none;
-    padding-left: 0;
-    color: var(--grey-color);
-
-    a {
-      text-decoration: none;
-      color: var(--grey-color);
-      margin: 0em 1em;
-    }
+  height: auto;
+  min-height: 3rem;
+  bottom: -3px;
+  background: var(--grey-color);
+  padding: 1rem;
+  p {
+    color: var(--white-color);
+    width: 60%;
+    text-align: center;
   }
 }
 
@@ -423,7 +419,7 @@ nav {
       width: 100%;
       .body {
         position: absolute;
-        top: -80%;
+        top: -60%;
         left: 50%;
       }
       .bum {
@@ -497,9 +493,6 @@ sl-dialog {
     width: unset;
     font-size: 1.5rem;
   }
-  .clip {
-    width: 200px;
-  }
 }
 
 .contact-wrap {
@@ -509,6 +502,9 @@ sl-dialog {
   flex-direction: column;
   h2.reach-out {
     line-height: 0.9;
+  }
+  .btn {
+    width: 400px;
   }
 }
 

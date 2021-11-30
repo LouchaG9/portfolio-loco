@@ -198,33 +198,28 @@ nav ul a {
 }
 
 .footer {
-  position: fixed;
-  bottom: 1rem;
-  left: 0;
-  width: 100%;
-  z-index: 2000;
-}
-
-.footer ul {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  list-style: none;
-  padding-left: 0;
-  color: var(--grey-color);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 3rem;
+  bottom: -3px;
+  background: var(--grey-color);
+  padding: 1rem;
 }
 
-.footer ul a {
-  text-decoration: none;
-  color: var(--grey-color);
-  margin: 0em 1em;
+.footer p {
+  color: var(--white-color);
+  width: 60%;
+  text-align: center;
 }
 
 #home .hero-copy {
@@ -613,7 +608,7 @@ nav ul a {
 
 #eotw .eotw-copy .drawings .body {
   position: absolute;
-  top: -80%;
+  top: -60%;
   left: 50%;
 }
 
@@ -699,10 +694,6 @@ sl-dialog .image-container img {
   font-size: 1.5rem;
 }
 
-.about-wrap .clip {
-  width: 200px;
-}
-
 .contact-wrap {
   width: 40%;
   display: -webkit-box;
@@ -719,6 +710,10 @@ sl-dialog .image-container img {
 
 .contact-wrap h2.reach-out {
   line-height: 0.9;
+}
+
+.contact-wrap .btn {
+  width: 400px;
 }
 
 .alert {
