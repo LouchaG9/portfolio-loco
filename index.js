@@ -27,18 +27,18 @@ function mouseFollow(event) {
 
 document.addEventListener("mousemove", mouseFollow);
 
-const photo = document.getElementById("profile-photo");
-const hoverTarget = document.querySelector(".about-wrap");
+// const photo = document.getElementById("profile-photo");
+// const hoverTarget = document.querySelector(".about-wrap");
 
-function cardHover(event) {
-  // 3d hover
-  let ax = -(window.innerWidth / 2 - event.pageX) / 100;
-  let ay = (window.innerHeight / 2 - event.pageY) / 20;
+// function cardHover(event) {
+//   // 3d hover
+//   let ax = -(window.innerWidth / 2 - event.pageX) / 100;
+//   let ay = (window.innerHeight / 2 - event.pageY) / 20;
 
-  photo.style.transform = "rotate(" + ax + "deg) rotateX(" + ay + "deg)";
-}
+//   photo.style.transform = "rotate(" + ax + "deg) rotateX(" + ay + "deg)";
+// }
 
-photo.addEventListener("mousemove", cardHover, false);
+// photo.addEventListener("mousemove", cardHover, false);
 
 const copyButton = document.querySelector(".clip");
 

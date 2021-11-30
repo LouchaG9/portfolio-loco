@@ -189,7 +189,7 @@ nav {
 
   .svg {
     position: absolute;
-    top: 10%;
+    top: 12%;
     right: 0;
     bottom: 0;
     height: 100vh;
@@ -380,7 +380,7 @@ nav {
     flex-direction: row;
     width: 50%;
     h1 {
-      color: #3482b1;
+      color: var(--grey-color);
     }
     h3 {
       font-size: 2em;
@@ -414,6 +414,27 @@ nav {
           max-width: 300px;
           height: auto;
         }
+      }
+    }
+    .drawings {
+      position: absolute;
+      z-index: -1000;
+      height: 100%;
+      width: 100%;
+      .body {
+        position: absolute;
+        top: -80%;
+        left: 50%;
+      }
+      .bum {
+        position: absolute;
+        bottom: -40%;
+        right: -20%;
+      }
+      .head {
+        position: absolute;
+        top: -45%;
+        left: -10%;
       }
     }
   }

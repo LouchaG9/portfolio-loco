@@ -250,7 +250,7 @@ nav ul a {
 
 #home .svg {
   position: absolute;
-  top: 10%;
+  top: 12%;
   right: 0;
   bottom: 0;
   height: 100vh;
@@ -544,7 +544,7 @@ nav ul a {
 }
 
 #eotw .eotw-copy h1 {
-  color: #3482b1;
+  color: var(--grey-color);
 }
 
 #eotw .eotw-copy h3 {
@@ -602,6 +602,31 @@ nav ul a {
           transform: scale(1.02);
   max-width: 300px;
   height: auto;
+}
+
+#eotw .eotw-copy .drawings {
+  position: absolute;
+  z-index: -1000;
+  height: 100%;
+  width: 100%;
+}
+
+#eotw .eotw-copy .drawings .body {
+  position: absolute;
+  top: -80%;
+  left: 50%;
+}
+
+#eotw .eotw-copy .drawings .bum {
+  position: absolute;
+  bottom: -40%;
+  right: -20%;
+}
+
+#eotw .eotw-copy .drawings .head {
+  position: absolute;
+  top: -45%;
+  left: -10%;
 }
 
 sl-dialog {
