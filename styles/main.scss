@@ -244,9 +244,8 @@ nav {
       align-items: center;
       width: 40%;
       img {
-        width: 800px;
-        transform: rotate(20deg);
-        margin-top: -8.5rem;
+        width: 300px;
+        margin-top: -100px;
       }
     }
   }
@@ -267,12 +266,16 @@ nav {
   z-index: 100;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
   .divi {
     background: url("/images/blue-waves.svg") top repeat;
+    position: absolute;
+    top: 0;
     background-size: cover;
-    margin-top: -5rem;
+    margin-top: -3rem;
     height: 100px;
     width: 100%;
     animation: ani 15s linear infinite;
@@ -280,30 +283,27 @@ nav {
   .row1 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     height: auto;
-    width: 100%;
-    margin-left: 15%;
-    .mockup {
-      width: 40%;
-      height: auto;
-      margin-left: -22%;
-    }
+    width: 120%;
+    margin-left: -10%;
   }
   .row2 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: -15rem;
     height: auto;
-    width: 100%;
-    margin-left: 8%;
-    .mockup {
-      width: 40%;
-      height: auto;
-      margin-left: -22%;
-    }
+    width: 110%;
+    margin-left: -5%;
   }
+}
+
+.mockup {
+  width: 300px;
+  height: auto;
+  border-radius: 46px;
+  box-shadow: 10px 20px 50px rgba(32, 44, 34, 0.4);
 }
 
 .divider {
@@ -474,6 +474,9 @@ sl-dialog {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-right: 8rem;
+  border: 5px var(--green-color);
+  border-style: none dashed none none;
   #profile-photo {
     min-width: 300px;
     max-width: 500px;
@@ -489,7 +492,7 @@ sl-dialog {
     color: var(--white-color);
   }
   p.about-me {
-    margin-top: 2rem;
+    margin-top: 5rem;
     width: unset;
     font-size: 1.5rem;
   }
@@ -500,8 +503,20 @@ sl-dialog {
   display: flex;
   align-items: center;
   flex-direction: column;
+  blockquote {
+    width: 70%;
+    font-size: 1.4rem;
+    color: var(--green-color);
+    padding-bottom: 1rem;
+  }
+  cite {
+    padding-bottom: 3rem;
+    border: 5px var(--green-color);
+    border-style: none none dashed none;
+  }
   h2.reach-out {
     line-height: 0.9;
+    padding-top: 2rem;
   }
   .btn {
     width: 400px;

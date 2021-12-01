@@ -331,10 +331,8 @@ nav ul a {
 }
 
 #break .break-copy .right img {
-  width: 800px;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  margin-top: -8.5rem;
+  width: 300px;
+  margin-top: -100px;
 }
 
 @-webkit-keyframes ani {
@@ -366,14 +364,19 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .image-holder .divi {
   background: url("/images/blue-waves.svg") top repeat;
+  position: absolute;
+  top: 0;
   background-size: cover;
-  margin-top: -5rem;
+  margin-top: -3rem;
   height: 100px;
   width: 100%;
   -webkit-animation: ani 15s linear infinite;
@@ -388,18 +391,12 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: auto;
-  width: 100%;
-  margin-left: 15%;
-}
-
-.image-holder .row1 .mockup {
-  width: 40%;
-  height: auto;
-  margin-left: -22%;
+  width: 120%;
+  margin-left: -10%;
 }
 
 .image-holder .row2 {
@@ -410,19 +407,21 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: -15rem;
   height: auto;
-  width: 100%;
-  margin-left: 8%;
+  width: 110%;
+  margin-left: -5%;
 }
 
-.image-holder .row2 .mockup {
-  width: 40%;
+.mockup {
+  width: 300px;
   height: auto;
-  margin-left: -22%;
+  border-radius: 46px;
+  -webkit-box-shadow: 10px 20px 50px rgba(32, 44, 34, 0.4);
+          box-shadow: 10px 20px 50px rgba(32, 44, 34, 0.4);
 }
 
 .divider {
@@ -669,6 +668,9 @@ sl-dialog .image-container img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-right: 8rem;
+  border: 5px var(--green-color);
+  border-style: none dashed none none;
 }
 
 .about-wrap #profile-photo {
@@ -689,7 +691,7 @@ sl-dialog .image-container img {
 }
 
 .about-wrap p.about-me {
-  margin-top: 2rem;
+  margin-top: 5rem;
   width: unset;
   font-size: 1.5rem;
 }
@@ -708,8 +710,22 @@ sl-dialog .image-container img {
           flex-direction: column;
 }
 
+.contact-wrap blockquote {
+  width: 70%;
+  font-size: 1.4rem;
+  color: var(--green-color);
+  padding-bottom: 1rem;
+}
+
+.contact-wrap cite {
+  padding-bottom: 3rem;
+  border: 5px var(--green-color);
+  border-style: none none dashed none;
+}
+
 .contact-wrap h2.reach-out {
   line-height: 0.9;
+  padding-top: 2rem;
 }
 
 .contact-wrap .btn {
