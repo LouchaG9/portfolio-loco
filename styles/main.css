@@ -712,6 +712,7 @@ sl-dialog .image-container img {
 
 .contact-wrap blockquote {
   width: 70%;
+  max-width: 500px;
   font-size: 1.4rem;
   color: var(--green-color);
   padding-bottom: 1rem;
