@@ -124,6 +124,7 @@ p {
 .primary-cta:hover {
   background: var(--green-color);
   color: var(--white-color);
+  cursor: none;
 }
 
 .primary-cta:hover i {
@@ -195,6 +196,14 @@ nav ul a {
   text-decoration: none;
   color: var(--grey-color);
   margin: 2em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding-bottom: 10px;
+}
+
+nav ul a:hover {
+  color: var(--green-color);
+  border-bottom: 5px solid var(--green-color);
 }
 
 .footer {
@@ -333,6 +342,9 @@ nav ul a {
 #break .break-copy .right img {
   width: 300px;
   margin-top: -100px;
+  -webkit-box-shadow: 10px 20px 50px rgba(27, 30, 51, 0.4);
+          box-shadow: 10px 20px 50px rgba(27, 30, 51, 0.4);
+  border-radius: 46px;
 }
 
 @-webkit-keyframes ani {
@@ -420,8 +432,8 @@ nav ul a {
   width: 300px;
   height: auto;
   border-radius: 46px;
-  -webkit-box-shadow: 10px 20px 50px rgba(32, 44, 34, 0.4);
-          box-shadow: 10px 20px 50px rgba(32, 44, 34, 0.4);
+  -webkit-box-shadow: 10px 20px 50px rgba(27, 30, 51, 0.4);
+          box-shadow: 10px 20px 50px rgba(27, 30, 51, 0.4);
 }
 
 .divider {
@@ -598,62 +610,39 @@ nav ul a {
   height: auto;
 }
 
-#eotw .eotw-copy .drawings {
+#eotw .drawings {
   position: absolute;
-  z-index: -1000;
-  height: 100%;
-  width: 100%;
-}
-
-#eotw .eotw-copy .drawings .body {
-  position: absolute;
-  top: -60%;
-  left: 50%;
-}
-
-#eotw .eotw-copy .drawings .bum {
-  position: absolute;
-  bottom: -40%;
-  right: -20%;
-}
-
-#eotw .eotw-copy .drawings .head {
-  position: absolute;
-  top: -45%;
-  left: -10%;
-}
-
-sl-dialog {
-  --width: 1440px;
-}
-
-sl-dialog .image-container {
-  height: 80vh;
-  width: auto;
-  max-width: 1400px;
-  overflow-x: hidden;
-}
-
-sl-dialog .image-container img {
-  width: 100%;
-}
-
-.dialog::part(overlay) {
-  background-color: #323233;
-}
-
-.dialog::part(panel) {
-  background-color: var(--white-color);
-}
-
-.end {
-  position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  height: 7vh;
-  background-color: var(--grey-color);
-  z-index: -5;
+  z-index: -1000;
+  height: 100vh;
+  width: 100vw;
+}
+
+#eotw .drawings .body {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+#eotw .drawings .bum {
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
+}
+
+#eotw .drawings .head {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+
+#eotw .drawings .swans {
+  position: absolute;
+  z-index: -1001;
+  left: -10vw;
+  bottom: 0;
+  margin: 0 auto;
 }
 
 .about-wrap {
@@ -765,90 +754,6 @@ sl-dialog .image-container img {
   transition: 0.5s ease;
 }
 
-@media (max-width: 800px) {
-  .card {
-    width: auto;
-    max-width: 350px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .card:hover {
-    height: 600px;
-  }
-  .card:hover .iphone {
-    top: 70%;
-    left: 50%;
-    height: 350px;
-  }
-  .card .content {
-    width: 100%;
-    left: 0;
-    padding: 40px;
-  }
-}
-
-@media only screen and (max-width: 406px) {
-  .work {
-    width: 15px;
-    height: 200px;
-  }
-  nav ul {
-    visibility: hidden;
-  }
-  nav .name {
-    margin: 1em 2em;
-    font-size: 2em;
-  }
-  .nav-menu {
-    visibility: hidden;
-  }
-  #profile-photo {
-    min-width: 250px;
-  }
-  p {
-    width: 80%;
-  }
-  sl-form {
-    width: 80%;
-  }
-  h2 {
-    font-size: 3em;
-  }
-  h2.reach-out {
-    margin-bottom: 1em;
-  }
-  .hero-copy h3 {
-    font-size: 1.8em;
-  }
-  .scroll-cta {
-    visibility: visible;
-    width: 100%;
-    color: var(--green-color);
-    position: relative;
-    bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-  .rotated {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  #fp-nav {
-    top: 15%;
-  }
-}
-
 #mouse-circle {
   height: 40px;
   width: 40px;
@@ -878,5 +783,234 @@ sl-dialog .image-container img {
   width: 7px;
   border-radius: 50%;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 475px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    width: 100vw;
+  }
+  nav span {
+    display: none;
+  }
+  #home .hero-copy {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #home .hero-copy .real {
+    font-size: 4em;
+  }
+  #home .hero-copy h3 {
+    font-size: 1.2em;
+  }
+  #home .hero-copy .btn-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: unset;
+  }
+  #home .svg {
+    display: none;
+  }
+  #break {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+  }
+  #break .break-copy {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #break .break-copy .left {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #break .break-copy .left h1 {
+    font-size: 4em;
+  }
+  #break .break-copy .right {
+    width: 100%;
+  }
+  #break .break-copy .right img {
+    width: 200px;
+    border-radius: 27px;
+    margin-bottom: 5rem;
+  }
+  #breaks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+  }
+  #breaks .row2 {
+    margin-top: -1rem;
+    margin-left: 2rem;
+  }
+  #breaks .divi {
+    z-index: -100;
+  }
+  #breaks img {
+    width: 150px;
+    border-radius: 20px;
+  }
+  #creec {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+  }
+  #creec .creec-copy {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #creec .creec-copy .left {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #creec .creec-copy .left h1 {
+    font-size: 4em;
+  }
+  #creec .creec-copy .right {
+    width: 100%;
+  }
+  #creec .creec-copy .right .img-div {
+    border-radius: 28px;
+    height: auto;
+  }
+  #creec .creec-copy .right img {
+    width: 200px;
+    border-radius: 38px;
+    margin-bottom: 5rem;
+  }
+  #eotw {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+  }
+  #eotw .eotw-copy {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #eotw .eotw-copy .left {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #eotw .eotw-copy .left h1 {
+    font-size: 4em;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  #eotw .drawings {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow-x: hidden;
+  }
+  #eotw .drawings .body {
+    top: -5%;
+    left: -30%;
+  }
+  #eotw .drawings .bum {
+    top: 10%;
+    left: 15%;
+  }
+  #eotw .drawings .head {
+    top: 6%;
+    left: 0;
+  }
+  #eotw .drawings .swans {
+    position: relative;
+    margin-top: 800px;
+  }
+  #eotw .drawings img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  #about-section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    margin-top: 10rem;
+  }
+  #about-section .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about-section .row .about-wrap {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: unset;
+    border-style: none none dashed none;
+    padding-bottom: 3rem;
+  }
+  #about-section .row .about-wrap img {
+    width: 300px;
+  }
+  #about-section .row .about-wrap .about-me {
+    width: 90%;
+    text-align: center;
+  }
+  #about-section .row .contact-wrap {
+    width: 90%;
+    padding-bottom: 3rem;
+  }
+  #about-section .row .contact-wrap blockquote {
+    width: unset;
+    padding-top: 2rem;
+  }
+  #about-section .row .contact-wrap h2 {
+    font-size: 3rem;
+  }
+  #about-section .row .contact-wrap .primary-cta.btn {
+    font-size: 1.2em;
+    width: 300px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer p {
+    width: 90%;
+  }
+  #mouse-circle {
+    display: none;
+  }
+  #mouse-circle div {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
