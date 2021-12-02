@@ -787,7 +787,11 @@ nav ul a:hover {
 
 @media only screen and (max-width: 1475px) {
   body {
-    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .section {
+    max-width: 100vw;
   }
   nav {
     width: 100vw;
@@ -853,13 +857,17 @@ nav ul a:hover {
         -ms-flex-pack: center;
             justify-content: center;
     height: auto;
+    overflow-x: hidden;
+  }
+  #breaks .row1 {
+    margin-top: 20px;
   }
   #breaks .row2 {
     margin-top: -1rem;
     margin-left: 2rem;
   }
   #breaks .divi {
-    z-index: -100;
+    display: none;
   }
   #breaks img {
     width: 150px;
@@ -922,8 +930,7 @@ nav ul a:hover {
   }
   #eotw .eotw-copy .left h1 {
     font-size: 4em;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 10rem;
   }
   #eotw .drawings {
     width: 100%;
@@ -937,15 +944,16 @@ nav ul a:hover {
     overflow-x: hidden;
   }
   #eotw .drawings .body {
-    top: -5%;
-    left: -30%;
+    top: 2%;
+    left: -34%;
   }
   #eotw .drawings .bum {
-    top: 10%;
-    left: 15%;
+    top: -8%;
+    left: 25%;
+    z-index: -100;
   }
   #eotw .drawings .head {
-    top: 6%;
+    top: 12%;
     left: 0;
   }
   #eotw .drawings .swans {
