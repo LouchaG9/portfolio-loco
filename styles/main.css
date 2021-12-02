@@ -785,7 +785,7 @@ nav ul a:hover {
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 1475px) {
   body {
     overflow-x: hidden;
   }
