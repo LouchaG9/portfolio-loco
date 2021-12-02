@@ -641,6 +641,9 @@ nav {
   #creec {
     justify-content: center;
     height: auto;
+    .divider {
+      display: none;
+    }
     .creec-copy {
       width: 90%;
       flex-direction: column-reverse;

@@ -879,6 +879,9 @@ nav ul a:hover {
             justify-content: center;
     height: auto;
   }
+  #creec .divider {
+    display: none;
+  }
   #creec .creec-copy {
     width: 90%;
     -webkit-box-orient: vertical;
