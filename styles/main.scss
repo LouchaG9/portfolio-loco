@@ -628,12 +628,17 @@ nav {
     .row2 {
       margin-top: -1rem;
       margin-left: 2rem;
+      padding-bottom: 3rem;
     }
     .divi {
       display: none;
     }
+    .stagger {
+      transform: translateY(30px);
+    }
     img {
       width: 150px;
+      height: auto;
       border-radius: 20px;
     }
   }

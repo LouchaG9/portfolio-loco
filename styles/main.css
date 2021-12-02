@@ -865,12 +865,18 @@ nav ul a:hover {
   #breaks .row2 {
     margin-top: -1rem;
     margin-left: 2rem;
+    padding-bottom: 3rem;
   }
   #breaks .divi {
     display: none;
   }
+  #breaks .stagger {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
   #breaks img {
     width: 150px;
+    height: auto;
     border-radius: 20px;
   }
   #creec {
